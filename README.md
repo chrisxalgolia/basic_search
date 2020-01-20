@@ -1,21 +1,4 @@
-# ais-ecommerce-demo-app
+Basic Search App by Chris Wilkes
 
-_This project was generated with [create-instantsearch-app](https://github.com/algolia/create-instantsearch-app) by [Algolia](https://algolia.com)._
+App for searching the top-rated movies by title, genre, year, or cast member built with Algolia Instant Search. The date range can also be specified. A user is also able to specify genre and date range whilst searching for a specific actor, for example, comedy films starring Arnold Schwarzenegger from the 90s (there are five). 
 
-## Get started
-
-To run this project locally, install the dependencies and run the local server:
-
-```sh
-npm install
-npm start
-```
-
-Alternatively, you may use [Yarn](https://http://yarnpkg.com/):
-
-```sh
-yarn
-yarn start
-```
-
-Open http://localhost:3000 to see your app.
