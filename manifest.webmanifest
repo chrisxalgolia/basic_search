@@ -1,6 +1,6 @@
 {
-  "short_name": "ais-ecommerce-demo-app",
-  "name": "ais-ecommerce-demo-app Sample",
+  "short_name": "basic_search_app",
+  "name": "basic_search_app CW",
   "icons": [
     {
       "src": "favicon.png",
