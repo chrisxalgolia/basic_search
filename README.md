@@ -5,4 +5,5 @@ App for searching the top-rated movies by title, genre, year, or cast member bui
 to run please do the following:
 
 `npm install`
+
 `npm run`
