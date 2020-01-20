@@ -1,11 +1,19 @@
-body { font-family: sans-serif; padding: 1em; }
+body { background-color: #708090;color:white;font-family: sans-serif; padding: 1em; }
 .ais-ClearRefinements { margin: 1em 0; }
-.ais-SearchBox { margin: 1em 0; }
+.ais-SearchBox { margin-right: 4em; }
 .ais-Pagination { margin-top: 1em; }
 .left-panel { float: left; width: 250px; }
 .right-panel { margin-left: 260px; }
-.ais-InstantSearch { max-width: 960px; overflow: hidden; margin: 0 auto; }
-.ais-Hits-item { margin-bottom: 1em; width: calc(50% - 1rem); }
-.ais-Hits-item img { margin-right: 1em; }
-.hit-name { margin-bottom: 0.5em; }
-.hit-score { color: #888; font-size: 14px; margin-bottom: 0.5em; }
+.ais-InstantSearch { border:none; max-width: 960px; overflow: hidden; margin: 0 auto; }
+.ais-Hits-item { border: none; border-width:0; margin-bottom: 1em; width: calc(30% - 1rem);}
+.ais-Hits-item img { border:none; margin-right: 0em; }
+.hit-name { margin-bottom: 0.5em;color:white; }
+.hit-score { color: #888; font-size: 14px; margin-bottom: 0.5em;color:white; }
+.hit-year { color: #888; font-size: 14px; margin-bottom: 0.5em;color:white; }
+.ais-RangeSlider {max-width: 620px; overflow: hidden;  padding-left: 1em;padding-right: 1em; color:white;}
+#rangeSliderHeader {text-align:center;font-size: 14px;}
+.ais-RefinementList-labelText {color:white;}
+.ais-RefinementList-showMore {color:white;}
+.ais-RangeSlider-rheostat-progress{color:white;}
+#rangeSliderHeader {text-align: center; padding-right: 6em;padding-top: 2em}
+#searchHeader{margin-top: 3em}

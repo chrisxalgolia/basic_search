@@ -7,41 +7,59 @@
   <meta name="theme-color" content="#000000">
 
   <link rel="manifest" href="./manifest.webmanifest">
-  <link rel="shortcut icon" href="./favicon.png">
+  <link rel="shortcut icon" href="./src/icons/clapper.png">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7/themes/algolia-min.css">
   <link rel="stylesheet" href="./src/index.css">
   <link rel="stylesheet" href="./src/app.css">
 
-  <title>Movie Search by Chris</title>
+  <title>The World's Greatest Movie Picker</title>
+  <style>
+  body {
+  	background-image: url("src/icons/bg.jpg");
+          background-repeat:no-repeat;
+         background-size:cover;
+  }
+</style>
+
 </head>
+
 
 <body>
 
 
   <div class="ais-InstantSearch">
-  <h1>Movie Search by Chris</h1>
+  <h1>Find The Top Rated Movies</h1>
 
   <div class="left-panel">
     <div id="current-refinements"></div>
 
     <h2>Genres</h2>
     <div id="genre-list"></div>
+    <h2>Sort By</h2>
+    <div id="sort-by"></div>
+
   </div>
 
   <div class="right-panel">
-    <div id="searchbox"></div>
+<h4 id="searchHeader">Never Be Bored Again. Search Now.</h4>
+    <div id="searchbox">  </div>
+    <div>
+      <div id=rangeSliderHeader>choose your era</div>
+      <div id="range-slider"></div>
+    </div>
+
     <div id="hits"></div>
     <div id="pagination"></div>
   </div>
 </div>
 
     <div id="pagination"></div>
-  </div>
+
 
   <script src="https://cdn.jsdelivr.net/algoliasearch/3.32.0/algoliasearchLite.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.1.1"></script>
   <script src="./src/app.js"></script>
-</body>
+
 
 </html>

@@ -6,9 +6,12 @@ const searchClient = algoliasearch(
 );
 
 const search = instantsearch({
-  indexName: 'movies',
+  indexName: 'movies_1',
   searchClient,
 });
+
+
+
 
 search.addWidgets([
   instantsearch.widgets.searchBox({
@@ -24,9 +27,24 @@ search.addWidgets([
     container: '#genre-list',
     attribute: 'genre',
   }),
+
+  instantsearch.widgets.sortBy({
+  container: '#sort-by',
+  items: [
+    { label: 'Rating', value: 'movies_1' },
+    { label: 'Year (asc)', value: 'instant_search_year_asc_1' },
+    { label: 'Year (desc)', value: 'instant_search_year_desc_1' },
+  ],
+}),
+
+instantsearch.widgets.rangeSlider({
+  container: '#range-slider',
+  attribute: 'year'
+}),
   instantsearch.widgets.hits({
 
     container: '#hits',
+
     templates: {
       item: `
         <div>
@@ -34,21 +52,23 @@ search.addWidgets([
           <div class="hit-name">
             {{#helpers.highlight}}{ "attribute": "title" }{{/helpers.highlight}}
           </div>
-          <div class="hit-description">
+          <div class="hit-year">
             {{#helpers.highlight}}{ "attribute": "year" }{{/helpers.highlight}}
           </div>
 
           <div class="hit-score">
-          Score:
-          {{#helpers.highlight}}{ "attribute": "score" }{{/helpers.highlight}}
+          Score: {{score}}
+
           </div>
-        </div>
+
       `,
     },
   }),
+
   instantsearch.widgets.pagination({
     container: '#pagination',
   }),
+
 ]);
 
 search.start();
