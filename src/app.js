@@ -1,12 +1,12 @@
 /* global algoliasearch instantsearch */
 
 const searchClient = algoliasearch(
-  'B1G2GM9NG0',
-  'aadef574be1f9252bb48d4ea09b5cfe5'
+  '0GFB0QH4BF',
+  'beec47efc2b906ae1cc912724fe565ff'
 );
 
 const search = instantsearch({
-  indexName: 'demo_ecommerce',
+  indexName: 'movies',
   searchClient,
 });
 
@@ -19,22 +19,29 @@ search.addWidgets([
   }),
 
   instantsearch.widgets.refinementList({
-    container: '#brand-list',
-    attribute: 'brand',
+    operator: 'and',
+    showMore: true,
+    container: '#genre-list',
+    attribute: 'genre',
   }),
   instantsearch.widgets.hits({
+
     container: '#hits',
     templates: {
       item: `
         <div>
           <img src="{{image}}" align="left" alt="{{name}}" />
           <div class="hit-name">
-            {{#helpers.highlight}}{ "attribute": "name" }{{/helpers.highlight}}
+            {{#helpers.highlight}}{ "attribute": "title" }{{/helpers.highlight}}
           </div>
           <div class="hit-description">
-            {{#helpers.highlight}}{ "attribute": "description" }{{/helpers.highlight}}
+            {{#helpers.highlight}}{ "attribute": "year" }{{/helpers.highlight}}
           </div>
-          <div class="hit-price">\${{price}}</div>
+
+          <div class="hit-score">
+          Score:
+          {{#helpers.highlight}}{ "attribute": "score" }{{/helpers.highlight}}
+          </div>
         </div>
       `,
     },
